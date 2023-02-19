@@ -27,12 +27,23 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
-    if "I" in text:
+    select_input = input("input - F or I")
+    if select_input.upper() == "F":
+        file_path = input("choose file (input path)")
+        with open(file_path, "r") as f:
+            text = f.read()
+            mismatch = find_mismatch(text)
+            if mismatch == None:
+                print("Success")
+            else:
+                print(mismatch)
+    else:
         text = input()
         mismatch = find_mismatch(text)
-        print(mismatch)
+        if mismatch == None:
+            print("Success")
+        else:
+            print(mismatch)
 
 
 if __name__ == "__main__":
