@@ -1,3 +1,4 @@
+#221RDB190 Daniels Tumans
 from collections import namedtuple
 
 Bracket = namedtuple("Bracket", ["char", "position"])
