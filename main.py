@@ -29,9 +29,9 @@ def find_mismatch(text):
 def main():
     text = input()
     mismatch = find_mismatch(text)
-    if mismatch == "Success":
-        print(mismatch)
-    else:
+    if "I" in text:
+        text = input()
+        mismatch = find_mismatch(text)
         print(mismatch)
 
 
